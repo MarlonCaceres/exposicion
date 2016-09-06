@@ -16,6 +16,12 @@ function AllCategoria(){
 	return $conexion->query($sql);
 }
 
+function AllServicios(){
+	global $conexion,$resultado;
+	$sql='SELECT * FROM ProductoEspecial';
+	return $conexion->query($sql);
+}
+
 function ver_Nombre($nombre)
 {
 	global $conexion, $resultado;
@@ -23,10 +29,24 @@ function ver_Nombre($nombre)
 	return $conexion-> query($sql);
 }
 
+function AllProductos(){
+	global $conexion, $resultado;
+	$sql = "SELECT * FROM productos";
+	return $conexion-> query($sql);	
+}
+
 function actualizar($id,$detalle,$tipo,$precio,$cantidad,$imagen)
 {
-	global $conexion;
+	global $conexion,$resultado;
 	$sql="UPDATE productos SET Detalle = '{$detalle}', Tipo_producto= '{$tipo}', Precio_producto='{$precio}', Cantidad='{$cantidad}', Imagen='{$imagen}' WHERE Id = {$id}";
+	$conexion->query($sql);
+}
+
+
+
+function IngresarCliente($nombre, $Empresa, $CargoEmpresa, $Correo, $Telefono, $Direccion, $IdProductoInteres){
+	global $conexion, $resultado;
+	$sql="INSERT INTO clientes (Nombre,Empresa,CargoEmpresa,Correo,Telefono,Direccion,IdProducto) VALUES ($nombre, $Empresa, $CargoEmpresa, $Correo, $Telefono, $Direccion, $IdProductoInteres)";
 	$conexion->query($sql);
 }
 

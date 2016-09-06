@@ -1,5 +1,11 @@
 <?php
+	require_once './db_utilities.php';
 	require_once 'menu.php';
+	$productos=AllProductos();
+
+	while($producto = $productos -> fetch_assoc()){
+		echo $producto['Nombre'];
+	}
 ?>
 <!DOCTYPE html>
 <html>

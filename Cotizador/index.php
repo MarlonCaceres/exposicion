@@ -1,5 +1,7 @@
 <?php
+	require_once './db_utilities.php';
 	require_once 'menu.php';
+	$Servicios=AllServicios();
 ?>
 <!DOCTYPE html>
 <html>
@@ -19,7 +21,7 @@
 	<div class="row">
 		<div class="col-md-4 col-xs-2"></div>
 		<div class="col-md-6 col-xs-8 centrar">
-			<form action="insertar.php" method="POST" enctype="multipart/form-data">
+			<form action="insertar.php" method="POST">
 				<div class="form-group">
 					<div class="row">
 						<div class="col-md-3 col-xs-2">
@@ -94,9 +96,15 @@
 						<div class="col-md-5 col-xs-2">
 							<select name="Pinteres" class="form-control">
 								<option value="0">Seleccione</option>
-								<option value="1">Videos 360°</option>
+								<?php while ($Servicio=$Servicios->fetch_assoc()){
+
+								?>
+								<option value="<?php echo $Servicio['Id'] ?>"><?php echo $Servicio['Nombre']?></option>
+								<?php }
+								?>
+								<!--option value="1">Videos 360°</option>
 								<option value="2">Realidad Aumentada</option>
-								<option value="3">Domotica</option>
+								<option value="3">Domotica</option-->
 							</select>
 						</div>
 					</div>				
