@@ -18,8 +18,14 @@ function AllCategoria(){
 
 function AllServicios(){
 	global $conexion,$resultado;
-	$sql='SELECT * FROM ProductoEspecial';
+	$sql='SELECT * FROM productoespecial';
 	return $conexion->query($sql);
+}
+
+function AllClientes(){
+	global $conexion,$resultado;
+	$sql='SELECT * FROM clientes';
+	return $conexion->query($sql);	
 }
 
 function ver_Nombre($nombre)

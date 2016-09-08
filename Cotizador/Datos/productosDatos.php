@@ -1,6 +1,6 @@
 <?php 
 
-require_once"./Entidades/productos.php";
+require_once'./Entidades/productos.php';
 require_once'./db_utilities.php';
 require_once './conexion.php';
 

@@ -3,8 +3,8 @@
 		function conectar(){
 			return mysqli_connect(
 				"localhost",
-				"demo",
-				"demo");
+				"root",
+				"");
 		}
 	}
 

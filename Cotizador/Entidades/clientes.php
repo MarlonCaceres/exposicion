@@ -23,14 +23,14 @@ class clientes
 	}
 
 	/*nombre*/
-	function get_nombre_producto()
+	function get_nombre()
 	{
-		return $this->nombre_producto;
+		return $this->nombre;
 	}
 
-	function set_nombre_producto($nombre_producto)
+	function set_nombre($nombre)
 	{
-		$this->nombre_producto = $nombre_producto;
+		$this->nombre = $nombre;
 	}
 
 	/*Telefono*/
@@ -55,14 +55,14 @@ class clientes
 		$this->Correo = $Correo;
 	}
 	/*Empresa_producto*/
-	function get_Empresa_producto()
+	function get_Empresa()
 	{
-		return $this->Empresa_producto;
+		return $this->Empresa;
 	}
 
-	function set_Empresa_producto($Empresa_producto)
+	function set_Empresa($Empresa)
 	{
-		$this->Empresa_producto = $Empresa_producto;
+		$this->Empresa = $Empresa;
 	}
 	/*Cargo*/
 	function get_Cargo()
@@ -87,14 +87,14 @@ class clientes
 	}
 
 	/*Interes*/
-	function get_Interes_producto()
+	function get_Interes()
 	{
-		return $this->Interes_producto;
+		return $this->Interes;
 	}
 
-	function set_Interes_producto($Interes_producto)
+	function set_Interes($Interes)
 	{
-		$this->Interes_producto = $Interes_producto;
+		$this->Interes = $Interes;
 	}
 
 }

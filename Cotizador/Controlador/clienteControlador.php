@@ -7,7 +7,7 @@ class clienteControlador
 	
 	function insertarCliente($nombre,$Empresa,$Cargo,$Direccion,$Correo,$Telefono,$Interes)
 	{
-		$obj= new ClientesDatos;
+		$obj= new clientesDatos;
 		return $obj->insertarCliente($nombre,$Empresa,$Cargo,$Direccion,$Correo,$Telefono,$Interes);
 	}
 }

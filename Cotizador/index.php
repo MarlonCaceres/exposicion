@@ -24,10 +24,10 @@
 			<form action="insertar.php" method="POST">
 				<div class="form-group">
 					<div class="row">
-						<div class="col-md-3 col-xs-2">
+						<div class="col-md-3 col-xs-3">
 							<label for="exampleInputEmail1">Nombre:</label>
 						</div>
-						<div class="col-md-5 col-xs-2">
+						<div class="col-md-5 col-xs-5">
 							<input class="form-control" type="text" name="nombre" placeholder="Juan Zapata">
 						</div>
 					</div>
@@ -35,10 +35,10 @@
 				
 				<div class="form-group">
 					<div class="row">
-						<div class="col-md-3 col-xs-2">
+						<div class="col-md-3 col-xs-3">
 							<label>Empresa:</label>
 						</div>
-						<div class="col-md-5 col-xs-2">
+						<div class="col-md-5 col-xs-5">
 							<input class="form-control" type="text" name="empresa" placeholder="Systeltronik">
 						</div>
 					</div>				
@@ -46,10 +46,10 @@
 					
 				<div class="form-group">
 					<div class="row">
-						<div class="col-md-3 col-xs-2">
+						<div class="col-md-3 col-xs-3">
 							<label>Cargo:</label>	
 						</div>
-						<div class="col-md-5 col-xs-2">
+						<div class="col-md-5 col-xs-5">
 							<input class="form-control" type="text" name="cargo" placeholder="Director">
 						</div>
 					</div>				
@@ -57,10 +57,10 @@
 				
 				<div class="form-group">
 					<div class="row">
-						<div class="col-md-3 col-xs-2">
+						<div class="col-md-3 col-xs-3">
 							<label>Direccion:</label>	
 						</div>
-						<div class="col-md-5 col-xs-2">
+						<div class="col-md-5 col-xs-5">
 							<input class="form-control" type="text" name="direccion" placeholder="Av. 6 de Diciembre">
 						</div>
 					</div>				
@@ -68,10 +68,10 @@
 				
 				<div class="form-group">
 					<div class="row">
-						<div class="col-md-3 col-xs-2">
+						<div class="col-md-3 col-xs-3">
 							<label>Correo:</label>
 						</div>
-						<div class="col-md-5 col-xs-2">
+						<div class="col-md-5 col-xs-5">
 							<input class="form-control" type="text" name="correo" placeholder="systeltronik@gmail.com">
 						</div>
 					</div>				
@@ -79,10 +79,10 @@
 				
 				<div class="form-group">
 					<div class="row">
-						<div class="col-md-3 col-xs-2">
+						<div class="col-md-3 col-xs-3">
 							<label>Telefono:</label>
 						</div>
-						<div class="col-md-5 col-xs-2">
+						<div class="col-md-5 col-xs-5">
 							<input class="form-control" type="text" name="telefono" placeholder="098 555 5555">
 						</div>
 					</div>				
@@ -90,10 +90,10 @@
 
 				<div class="form-group">
 					<div class="row">
-						<div class="col-md-3 col-xs-2">
+						<div class="col-md-3 col-xs-3">
 							<label>Producto Interes:</label>
 						</div>
-						<div class="col-md-5 col-xs-2">
+						<div class="col-md-5 col-xs-5">
 							<select name="Pinteres" class="form-control">
 								<option value="0">Seleccione</option>
 								<?php while ($Servicio=$Servicios->fetch_assoc()){
@@ -102,9 +102,6 @@
 								<option value="<?php echo $Servicio['Id'] ?>"><?php echo $Servicio['Nombre']?></option>
 								<?php }
 								?>
-								<!--option value="1">Videos 360°</option>
-								<option value="2">Realidad Aumentada</option>
-								<option value="3">Domotica</option-->
 							</select>
 						</div>
 					</div>				

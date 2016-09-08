@@ -1,6 +1,6 @@
 <?php 
 
-require_once"./Entidades/clientes.php";
+require_once './Entidades/clientes.php';
 require_once'./db_utilities.php';
 require_once './conexion.php';
 
@@ -23,13 +23,13 @@ class clientesDatos
 		mysqli_select_db($cn,"dbexposicion");
 
 		$sql="INSERT INTO clientes (Nombre,Empresa,CargoEmpresa,Correo,Telefono,Direccion,IdProducto) VALUES (
-		'".$producto->nombre."',
-		'".$producto->Empresa."',
-		'".$producto->Cargo."',
-		'".$producto->Direccion."',
-		'".$producto->Correo."',
-		'".$producto->Telefono."',
-		'".$producto->Interes."'
+		'".$cliente->nombre."',
+		'".$cliente->Empresa."',
+		'".$cliente->Cargo."',
+		'".$cliente->Direccion."',
+		'".$cliente->Correo."',
+		'".$cliente->Telefono."',
+		'".$cliente->Interes."'
 		)";
 
 		if(mysqli_query($cn,$sql))
