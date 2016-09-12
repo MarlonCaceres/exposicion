@@ -8,41 +8,24 @@ $cargo=$_POST['cargo'];
 $direccion=$_POST['direccion'];
 $correo=$_POST['correo'];
 $telefono=$_POST['telefono'];
+$detalle=$_POST['detalle'];
 $interes=$_POST['Pinteres'];
 
-if($nombre==null||$empresa==null||$cargo==null||$direccion==null||$correo==null||$telefono==null||$interes==null){
+if($nombre==null||$empresa==null||$cargo==null||$direccion==null||$correo==null||$telefono==null||$detalle==null||$interes==null){
 	header('Location: index.php?error=1');
 }else{
-	switch ($interes) {
-		case '1':
-			$clienteCon= new clienteControlador();
-			if ($clienteCon->insertarCliente($nombre,$empresa,$cargo,$direccion,$correo,$telefono,$interes)){
-				header('Location: cotizar.php?id=1');	
-			}else{
-				echo 'error';
-			}
-			
-			break;
-		case '2':
-			$clienteCon= new clienteControlador();
-			if ($clienteCon->insertarCliente($nombre,$empresa,$cargo,$correo,$telefono,$direccion,$interes)){
-				header('Location: cotizar.php?id=2');	
-			}else{
-				echo 'error';
-			}
-			break;
-		case '3':
-			$clienteCon= new clienteControlador();
-			if ($clienteCon->insertarCliente($nombre,$empresa,$cargo,$correo,$telefono,$direccion,$interes)){
-				header('Location: cotizar.php?id=3');	
-			}else{
-				echo 'error';
-			}
-			break;
-		default:
-			header('Location: index.php?error=2');
-			break;
+	if($interes=='1' || $interes=='2'|| $interes=='3'){
+		$clienteCon= new clienteControlador();
+		if ($clienteCon->insertarCliente($nombre,$empresa,$cargo,$direccion,$correo,$telefono,$interes,$detalle)){
+			header('Location: cotizar.php');	
+		}else{
+			echo 'error';
+		}
+	}else{
+		header('Location: index.php?error=2');
 	}
+			
 }
+
 
  ?>

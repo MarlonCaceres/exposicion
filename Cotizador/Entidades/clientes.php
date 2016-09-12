@@ -10,6 +10,7 @@ class clientes
 	public $Telefono;
 	public $Direccion;
 	public $Interes;
+	public $Detalle;
 
 	/*ID*/
 	function get_id()
@@ -96,6 +97,15 @@ class clientes
 	{
 		$this->Interes = $Interes;
 	}
+	/*detalle*/
+	function get_Detalle()
+	{
+		return $this->Detalle;
+	}
 
+	function set_Detalle($Detalle)
+	{
+		$this->Detalle = $Detalle;
+	}
 }
 ?>

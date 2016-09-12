@@ -7,7 +7,7 @@ require_once './conexion.php';
 class clientesDatos
 {
 	
-	function insertarCliente($nombre,$Empresa,$Cargo,$Direccion,$Correo,$Telefono,$Interes){
+	function insertarCliente($nombre,$Empresa,$Cargo,$Direccion,$Correo,$Telefono,$Interes,$Detalle){
 		$con = new conexion();
 		$cn=$con->conectar();
 		
@@ -19,17 +19,19 @@ class clientesDatos
 		$cliente->Correo=$Correo;
 		$cliente->Telefono=$Telefono;
 		$cliente->Interes=$Interes;
+		$cliente->Detalle=$Detalle;
 
 		mysqli_select_db($cn,"dbexposicion");
 
-		$sql="INSERT INTO clientes (Nombre,Empresa,CargoEmpresa,Correo,Telefono,Direccion,IdProducto) VALUES (
+		$sql="INSERT INTO clientes (Nombre,Empresa,CargoEmpresa,Correo,Telefono,Direccion,IdProducto,Detalle) VALUES (
 		'".$cliente->nombre."',
 		'".$cliente->Empresa."',
 		'".$cliente->Cargo."',
 		'".$cliente->Direccion."',
 		'".$cliente->Correo."',
 		'".$cliente->Telefono."',
-		'".$cliente->Interes."'
+		'".$cliente->Interes."',
+		'".$cliente->Detalle."'
 		)";
 
 		if(mysqli_query($cn,$sql))

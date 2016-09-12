@@ -91,6 +91,17 @@
 				<div class="form-group">
 					<div class="row">
 						<div class="col-md-3 col-xs-3">
+							<label>Detalle:</label>
+						</div>
+						<div class="col-md-5 col-xs-5">
+							<textarea rows="3" cols="22" class="form-control" type="text" name="detalle" placeholder="10 camaras para la casa"></textarea>
+						</div>
+					</div>				
+				</div>
+
+				<div class="form-group">
+					<div class="row">
+						<div class="col-md-3 col-xs-3">
 							<label>Producto Interes:</label>
 						</div>
 						<div class="col-md-5 col-xs-5">
@@ -110,7 +121,7 @@
 				<div class="form-group">
 					<div class="row">
 						<div class="col-md-12 col-xs-12">
-							<input type="submit" class="btn btn-default" value="Registar">
+							<input type="submit" class="btn btn-default" value="Registrar">
 						</div>
 					</div>				
 				</div>

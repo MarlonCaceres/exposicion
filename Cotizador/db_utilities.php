@@ -28,6 +28,26 @@ function AllClientes(){
 	return $conexion->query($sql);	
 }
 
+function AllProforma(){
+	global $conexion,$resultado;
+	$sql='SELECT * FROM proforma';
+	return $conexion->query($sql);	
+}
+
+function Ver_Producto($pe){
+	global $conexion,$resultado;
+	$sql="SELECT Nombre FROM productoespecial WHERE Id='{$pe}'";
+	return $conexion->query($sql);	
+}
+
+function Ver_Cliente($id){
+	global $conexion,$resultado;
+	$sql="SELECT * FROM clientes WHERE Id='{$id}'";
+	return $conexion->query($sql);
+}
+
+
+/**/
 function ver_Nombre($nombre)
 {
 	global $conexion, $resultado;
@@ -40,6 +60,7 @@ function AllProductos(){
 	$sql = "SELECT * FROM productos";
 	return $conexion-> query($sql);	
 }
+
 
 function actualizar($id,$detalle,$tipo,$precio,$cantidad,$imagen)
 {
